@@ -112,37 +112,37 @@ export function Contact() {
             </div>
           </BlurFade>
 
-          {/* Map placeholder */}
+          {/* Google Maps embed + itinéraire */}
           <BlurFade delay={0.15}>
-            <div
-              className="relative aspect-[4/5] rounded-lg overflow-hidden border border-rule"
-              style={{ background: "linear-gradient(165deg, #eef1f6, #dee3ec)" }}
-            >
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "repeating-linear-gradient(0deg, rgba(27,58,92,.05) 0 1px, transparent 1px 48px), repeating-linear-gradient(90deg, rgba(27,58,92,.05) 0 1px, transparent 1px 48px), repeating-linear-gradient(45deg, rgba(201,169,110,.06) 0 1px, transparent 1px 96px)",
-                }}
+            <div className="relative rounded-lg overflow-hidden border border-rule">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2711.5!2d-2.2089!3d47.2782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805695f3e3e2e1d%3A0x0!2s20%20Rue%20Antoine%20Parmentier%2C%2044600%20Saint-Nazaire!5e0!3m2!1sfr!2sfr!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: "480px" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Cabinet d'Avigneau — 20 rue Antoine Parmentier, Saint-Nazaire"
+                className="aspect-[4/5] w-full"
               />
-              {/* Roads */}
-              <div className="absolute top-1/2 left-0 right-0 h-[34px] bg-white/70 -translate-y-1/2 -rotate-[3deg]" />
-              <div className="absolute inset-y-0 right-[34%] w-[30px] bg-white/70 rotate-[8deg]" />
-              {/* Pin */}
-              <div className="absolute top-[48%] left-[54%] -translate-x-1/2 -translate-y-full flex flex-col items-center gap-1.5">
-                <span className="font-serif italic text-[14px] text-ink bg-white px-3 py-1.5 rounded-full shadow-[0_8px_16px_-8px_rgba(27,58,92,.3)]">
-                  Cabinet d&apos;Avigneau
+              {/* Bouton itinéraire */}
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=20+Rue+Antoine+Parmentier,+44600+Saint-Nazaire"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-5 left-1/2 -translate-x-1/2 inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-ink text-white text-[14px] font-medium shadow-[0_20px_40px_-16px_rgba(27,58,92,.5)] hover:-translate-y-0.5 transition-transform group"
+                style={{ transitionTimingFunction: "var(--ease)" }}
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px] text-gold">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                  <circle cx="12" cy="9" r="2.5" />
+                </svg>
+                Itinéraire
+                <span className="inline-grid place-items-center w-[22px] h-[22px] rounded-full bg-gold text-ink group-hover:translate-x-[3px] transition-transform">
+                  <Arrow />
                 </span>
-                <span className="relative w-6 h-6 rounded-full bg-gold border-4 border-white shadow-[0_8px_18px_-4px_rgba(201,169,110,.6)]">
-                  <span
-                    className="absolute inset-[-12px] rounded-full"
-                    style={{
-                      background: "radial-gradient(closest-side, rgba(201,169,110,.4), transparent 70%)",
-                      animation: "pulse 2.2s ease-in-out infinite",
-                    }}
-                  />
-                </span>
-              </div>
+              </a>
             </div>
           </BlurFade>
         </div>
