@@ -1,4 +1,4 @@
-import { Reveal } from "./reveal";
+import { BlurFade } from "./blur-fade";
 
 const techData = [
   {
@@ -39,7 +39,7 @@ export function Technologie() {
         style={{ background: "radial-gradient(closest-side, rgba(201,169,110,.16), transparent 70%)" }}
       />
       <div className="max-w-[var(--max-w)] mx-auto px-[var(--gutter)] relative">
-        <Reveal>
+        <BlurFade>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end mb-16">
             <div>
               <div className="inline-flex items-center gap-3.5 text-[11px] font-medium tracking-[.32em] uppercase text-gold">
@@ -60,11 +60,11 @@ export function Technologie() {
               plus de précision, moins d&apos;attente, et un confort réel à chaque étape.
             </p>
           </div>
-        </Reveal>
+        </BlurFade>
 
         <div className="grid grid-cols-12 gap-5 mt-6">
           {techData.map((card, i) => (
-            <Reveal key={card.num} delay={i % 2 * 0.08} className={card.span}>
+            <BlurFade key={card.num} delay={i % 2 * 0.12} className={card.span}>
               <article className="relative bg-white/4 border border-white/10 rounded-[6px] p-9 overflow-hidden hover:bg-white/7 hover:border-gold/40 hover:-translate-y-1 transition-all duration-500 h-full" style={{ transitionTimingFunction: "var(--ease)" }}>
                 <span className="font-serif italic text-gold text-[13.5px] tracking-[.02em]">{card.num}</span>
                 <h3 className="mt-[18px] mb-3 font-serif font-normal text-white leading-[1.05] tracking-[-0.015em]" style={{ fontSize: "clamp(24px, 2.4vw, 34px)" }}>
@@ -78,7 +78,7 @@ export function Technologie() {
                   </span>
                 </div>
               </article>
-            </Reveal>
+            </BlurFade>
           ))}
         </div>
       </div>

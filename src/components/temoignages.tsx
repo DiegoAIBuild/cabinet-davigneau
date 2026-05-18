@@ -1,4 +1,4 @@
-import { Reveal } from "./reveal";
+import { BlurFade } from "./blur-fade";
 
 const Star = ({ delay }: { delay: number }) => (
   <svg
@@ -18,29 +18,28 @@ const Stars = () => (
   </div>
 );
 
-// TODO: Remplacer par de vrais témoignages patients (avec leur accord écrit)
-// Ces exemples sont des PLACEHOLDERS — ne pas mettre en production en l'état
+// Vrais avis Google (fiche Dr Thibaud MARIE d'AVIGNEAU — 5/5, 10 avis)
 const testimonials = [
   {
     quote:
-      "[Témoignage patient à insérer — obtenir l'accord écrit du patient avant publication]",
-    name: "Prénom P.",
-    source: "Source · date",
-    initial: "?",
+      "Enfin trouvé un bon dentiste qui répare les erreurs des autres. Il est jeune mais doué et il ne fera que s'améliorer avec le temps. Très arrangeant sur les remboursements, il nous voit comme des patients et non des clients.",
+    name: "Teatch D.",
+    source: "Google · mars 2024",
+    initial: "T",
   },
   {
     quote:
-      "[Témoignage patient à insérer — obtenir l'accord écrit du patient avant publication]",
-    name: "Prénom P.",
-    source: "Source · date",
-    initial: "?",
+      "Excellent praticien très à l'écoute et humain. Assistante au top également.",
+    name: "Stéphane P.",
+    source: "Google · septembre 2024",
+    initial: "S",
   },
   {
     quote:
-      "[Témoignage patient à insérer — obtenir l'accord écrit du patient avant publication]",
-    name: "Prénom P.",
-    source: "Source · date",
-    initial: "?",
+      "Un avis très favorable, les soins au top et son assistante est très sympa. Tout est parfait.",
+    name: "Kad K.",
+    source: "Google · décembre 2024",
+    initial: "K",
   },
 ];
 
@@ -48,7 +47,7 @@ export function Temoignages() {
   return (
     <section id="temoignages" className="py-[var(--section-y)] bg-white">
       <div className="max-w-[var(--max-w)] mx-auto px-[var(--gutter)]">
-        <Reveal>
+        <BlurFade>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end mb-14">
             <div>
               <div className="inline-flex items-center gap-3.5 text-[11px] font-medium tracking-[.32em] uppercase text-gold-deep">
@@ -63,15 +62,15 @@ export function Temoignages() {
               </h2>
             </div>
             <p className="text-ink-soft leading-[1.65] max-w-[56ch]" style={{ fontSize: "clamp(17px, 1.35vw, 20px)" }}>
-              Retrouvez les avis de nos patients sur Doctolib et Google.
-              Chaque témoignage reflète une expérience vécue au cabinet.
+              Nos patients partagent leur expérience. Note Google&nbsp;:
+              {" "}<strong className="text-ink">5,0 / 5</strong> — 10 avis, tous 5 étoiles.
             </p>
           </div>
-        </Reveal>
+        </BlurFade>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <Reveal key={t.name} delay={i * 0.08}>
+            <BlurFade key={t.name} delay={i * 0.12}>
               <div className="border border-rule rounded-lg p-9 pb-8 bg-paper flex flex-col hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(27,58,92,.18)] transition-all duration-500 h-full" style={{ transitionTimingFunction: "var(--ease)" }}>
                 <Stars />
                 <p className="font-serif text-[21px] leading-[1.45] text-ink tracking-[-0.01em] font-normal">
@@ -87,7 +86,7 @@ export function Temoignages() {
                   </div>
                 </div>
               </div>
-            </Reveal>
+            </BlurFade>
           ))}
         </div>
       </div>

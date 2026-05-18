@@ -1,4 +1,7 @@
-import { Reveal } from "./reveal";
+"use client";
+
+import { BlurFade } from "./blur-fade";
+import { AnimatedCounter } from "./animated-counter";
 
 export function Praticien() {
   return (
@@ -6,7 +9,7 @@ export function Praticien() {
       <div className="max-w-[var(--max-w)] mx-auto px-[var(--gutter)]">
         <div className="grid grid-cols-1 md:grid-cols-[.9fr_1.1fr] gap-[clamp(40px,6vw,96px)] items-center">
           {/* Portrait placeholder */}
-          <Reveal>
+          <BlurFade>
             <div className="relative aspect-[4/5] bg-mist rounded-[6px] overflow-hidden shadow-[0_30px_80px_-30px_rgba(27,58,92,.25)]">
               <div
                 className="absolute inset-0"
@@ -25,15 +28,15 @@ export function Praticien() {
                     Nantes
                   </span>
                   <span className="font-sans not-italic text-[10px] tracking-[.16em] text-white/60 mt-1">
-                    FACULTÉ&nbsp;2012
+                    FACULTÉ
                   </span>
                 </div>
               </div>
             </div>
-          </Reveal>
+          </BlurFade>
 
           {/* Copy */}
-          <Reveal delay={0.08}>
+          <BlurFade delay={0.15}>
             <div className="inline-flex items-center gap-3.5 text-[11px] font-medium tracking-[.32em] uppercase text-gold-deep">
               <span className="w-7 h-px bg-gold" />
               Le praticien
@@ -53,8 +56,7 @@ export function Praticien() {
             </p>
             <p className="mb-0 text-ink-soft max-w-[54ch] text-[16.5px]">
               Son approche est conservatrice par principe&nbsp;: préserver chaque tissu sain,
-              n&apos;intervenir qu&apos;avec mesure, et accompagner ses patients dans la durée. Le
-              cabinet a ouvert à Saint-Nazaire en 2014.
+              n&apos;intervenir qu&apos;avec mesure, et accompagner ses patients dans la durée.
             </p>
 
             <div className="mt-9 flex items-center gap-[18px]">
@@ -64,7 +66,29 @@ export function Praticien() {
               <span className="flex-1 h-px bg-rule max-w-[120px]" />
               <span className="text-[12px] tracking-[.18em] uppercase text-muted">SELARL COACH</span>
             </div>
-          </Reveal>
+
+            {/* Animated stats */}
+            <div className="mt-12 grid grid-cols-3 gap-6 pt-8 border-t border-rule">
+              <div>
+                <div className="font-serif text-[34px] font-medium text-ink tracking-[-0.015em] leading-none">
+                  <AnimatedCounter end={5} suffix="/5" />
+                </div>
+                <div className="mt-2 text-[12.5px] text-muted tracking-[.02em]">Note Google</div>
+              </div>
+              <div>
+                <div className="font-serif text-[34px] font-medium text-ink tracking-[-0.015em] leading-none">
+                  <AnimatedCounter end={10} suffix="+" />
+                </div>
+                <div className="mt-2 text-[12.5px] text-muted tracking-[.02em]">Avis patients</div>
+              </div>
+              <div>
+                <div className="font-serif text-[34px] font-medium text-ink tracking-[-0.015em] leading-none">
+                  Secteur <AnimatedCounter end={1} />
+                </div>
+                <div className="mt-2 text-[12.5px] text-muted tracking-[.02em]">Conventionné</div>
+              </div>
+            </div>
+          </BlurFade>
         </div>
       </div>
     </section>

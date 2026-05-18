@@ -1,6 +1,6 @@
 "use client";
 
-import { Reveal } from "./reveal";
+import { BlurFade } from "./blur-fade";
 
 const soinsData = [
   {
@@ -64,7 +64,7 @@ export function Soins() {
     <section id="soins" className="py-[var(--section-y)] bg-mist">
       <div className="max-w-[var(--max-w)] mx-auto px-[var(--gutter)]">
         {/* Header */}
-        <Reveal>
+        <BlurFade>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end mb-16">
             <div>
               <div className="inline-flex items-center gap-3.5 text-[11px] font-medium tracking-[.32em] uppercase text-gold-deep">
@@ -86,12 +86,12 @@ export function Soins() {
               de précision et de confort.
             </p>
           </div>
-        </Reveal>
+        </BlurFade>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule rounded-lg overflow-hidden">
           {soinsData.map((soin, i) => (
-            <Reveal key={soin.num} delay={i % 3 * 0.08}>
+            <BlurFade key={soin.num} delay={i % 3 * 0.1}>
               <div className="bg-white p-8 pb-8 min-h-[340px] flex flex-col group hover:bg-paper transition-colors duration-500">
                 <span className="font-serif italic text-[14px] text-gold-deep tracking-[.02em]">
                   {soin.num} / {soin.label}
@@ -121,7 +121,7 @@ export function Soins() {
                   </span>
                 </span>
               </div>
-            </Reveal>
+            </BlurFade>
           ))}
         </div>
       </div>

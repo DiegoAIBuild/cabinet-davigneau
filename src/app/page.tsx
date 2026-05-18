@@ -11,7 +11,7 @@ import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { FloatingCta } from "@/components/floating-cta";
 import { CursorTrail } from "@/components/cursor-trail";
-import { Reveal } from "@/components/reveal";
+import { ClosingLine } from "@/components/closing-line";
 
 export default function Home() {
   return (
@@ -29,23 +29,7 @@ export default function Home() {
       <AvantApres />
       <Temoignages />
       <Cabinet />
-
-      {/* Closing line */}
-      <section className="pt-[var(--section-y)] text-center">
-        <div className="max-w-[var(--max-w)] mx-auto px-[var(--gutter)]">
-          <Reveal>
-            <h2
-              className="font-serif font-normal tracking-[-0.022em] leading-[.98] max-w-[14ch] mx-auto"
-              style={{ fontSize: "clamp(48px, 8vw, 128px)" }}
-            >
-              Reprendre soin de <em className="italic font-medium text-gold-deep">son sourire,</em>
-              <br />
-              simplement.
-            </h2>
-          </Reveal>
-        </div>
-      </section>
-
+      <ClosingLine />
       <Contact />
       <Footer />
       <FloatingCta />
@@ -74,11 +58,16 @@ export default function Home() {
               latitude: 47.2782,
               longitude: -2.2089,
             },
-            // TODO: Confirmer les horaires exacts avec le cabinet avant publication
             medicalSpecialty: "Dentistry",
             priceRange: "€€",
             paymentAccepted: "Carte vitale, CB, chèque",
             isAcceptingNewPatients: true,
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              reviewCount: "10",
+              bestRating: "5",
+            },
           }),
         }}
       />

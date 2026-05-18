@@ -1,4 +1,4 @@
-import { Reveal } from "./reveal";
+import { BlurFade } from "./blur-fade";
 
 const Arrow = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-[11px] h-[11px]">
@@ -10,7 +10,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-[var(--section-y)] bg-white">
       <div className="max-w-[var(--max-w)] mx-auto px-[var(--gutter)]">
-        <Reveal>
+        <BlurFade>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end mb-12">
             <div>
               <div className="inline-flex items-center gap-3.5 text-[11px] font-medium tracking-[.32em] uppercase text-gold-deep">
@@ -29,11 +29,11 @@ export function Contact() {
               nous joindre par téléphone aux horaires d&apos;ouverture.
             </p>
           </div>
-        </Reveal>
+        </BlurFade>
 
         <div className="grid grid-cols-1 md:grid-cols-[1.05fr_.95fr] gap-[clamp(40px,5vw,80px)] items-start mt-12">
           {/* Info card */}
-          <Reveal>
+          <BlurFade>
             <div className="border border-rule rounded-lg p-9 bg-paper">
               {[
                 {
@@ -110,10 +110,10 @@ export function Contact() {
                 </div>
               ))}
             </div>
-          </Reveal>
+          </BlurFade>
 
           {/* Map placeholder */}
-          <Reveal delay={0.08}>
+          <BlurFade delay={0.15}>
             <div
               className="relative aspect-[4/5] rounded-lg overflow-hidden border border-rule"
               style={{ background: "linear-gradient(165deg, #eef1f6, #dee3ec)" }}
@@ -144,7 +144,7 @@ export function Contact() {
                 </span>
               </div>
             </div>
-          </Reveal>
+          </BlurFade>
         </div>
       </div>
     </section>
