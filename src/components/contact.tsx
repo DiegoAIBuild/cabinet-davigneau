@@ -42,7 +42,7 @@ export function Contact() {
                     <>
                       20 rue Antoine Parmentier <em className="italic text-gold-deep">—</em> 44600 Saint-Nazaire
                       <small className="block mt-1.5 font-sans not-italic text-[13px] text-ink-soft font-normal tracking-normal">
-                        Parking gratuit · Tram T1 arrêt Petit Maroc · Accès PMR
+                        Bus BHNS H3 arrêt Petit Maroc · Parking à proximité
                       </small>
                     </>
                   ),
@@ -73,21 +73,11 @@ export function Contact() {
                   k: "Horaires",
                   v: (
                     <div className="font-sans text-[14px] tracking-normal space-y-0">
-                      {[
-                        ["Lundi", "8:30 – 19:00"],
-                        ["Mardi", "8:30 – 19:00"],
-                        ["Mercredi", "8:30 – 13:00"],
-                        ["Jeudi", "8:30 – 19:00"],
-                        ["Vendredi", "8:30 – 17:00"],
-                      ].map(([day, hrs]) => (
-                        <div key={day} className="flex justify-between gap-6 text-ink py-1">
-                          <span>{day}</span>
-                          <span className="text-ink-soft tabular-nums">{hrs}</span>
-                        </div>
-                      ))}
-                      <div className="flex justify-between gap-6 text-ink py-1">
-                        <span>Samedi · Dimanche</span>
-                        <span className="text-gold-deep italic font-serif">Fermé</span>
+                      {/* TODO: Confirmer les horaires exacts avec le cabinet */}
+                      <div className="text-ink-soft text-[13px] italic py-1">
+                        Horaires à confirmer auprès du cabinet.
+                        <br />
+                        Contactez-nous au 02 40 70 15 59.
                       </div>
                     </div>
                   ),

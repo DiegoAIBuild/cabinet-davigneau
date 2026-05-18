@@ -18,27 +18,29 @@ const Stars = () => (
   </div>
 );
 
+// TODO: Remplacer par de vrais témoignages patients (avec leur accord écrit)
+// Ces exemples sont des PLACEHOLDERS — ne pas mettre en production en l'état
 const testimonials = [
   {
     quote:
-      "Un cabinet où l'on se sent réellement écouté. Le Dr d'Avigneau explique tout, prend le temps qu'il faut, et les soins sont d'une précision rare.",
-    name: "Marion L.",
-    source: "Doctolib · mars 2026",
-    initial: "M",
+      "[Témoignage patient à insérer — obtenir l'accord écrit du patient avant publication]",
+    name: "Prénom P.",
+    source: "Source · date",
+    initial: "?",
   },
   {
     quote:
-      "J'avais une vraie appréhension du dentiste. Ici, tout est apaisant — la salle, l'équipe, l'approche. Mon implant s'est posé sans douleur.",
-    name: "Antoine R.",
-    source: "Google · février 2026",
-    initial: "A",
+      "[Témoignage patient à insérer — obtenir l'accord écrit du patient avant publication]",
+    name: "Prénom P.",
+    source: "Source · date",
+    initial: "?",
   },
   {
     quote:
-      "Le scanner 3D au lieu de la pâte d'empreinte, ça change tout. Et le résultat de mes facettes est exactement ce que j'avais imaginé.",
-    name: "Camille P.",
-    source: "Doctolib · janvier 2026",
-    initial: "C",
+      "[Témoignage patient à insérer — obtenir l'accord écrit du patient avant publication]",
+    name: "Prénom P.",
+    source: "Source · date",
+    initial: "?",
   },
 ];
 
@@ -61,8 +63,8 @@ export function Temoignages() {
               </h2>
             </div>
             <p className="text-ink-soft leading-[1.65] max-w-[56ch]" style={{ fontSize: "clamp(17px, 1.35vw, 20px)" }}>
-              Avis vérifiés par Doctolib et Google. La note moyenne du cabinet est de{" "}
-              <strong className="text-ink">4,9 / 5</strong> sur plus de 240 retours.
+              Retrouvez les avis de nos patients sur Doctolib et Google.
+              Chaque témoignage reflète une expérience vécue au cabinet.
             </p>
           </div>
         </Reveal>

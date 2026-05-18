@@ -47,9 +47,9 @@ export function Praticien() {
               une exigence constante.
             </h2>
             <p className="mb-[18px] text-ink-soft max-w-[54ch] text-[16.5px]">
-              Diplômé de la Faculté de chirurgie dentaire de Nantes en 2012, le Dr d&apos;Avigneau
-              a complété sa formation par plusieurs spécialisations — implantologie, esthétique
-              dentaire, et endodontie sous microscope opératoire.
+              Diplômé de la Faculté de chirurgie dentaire de Nantes, le Dr d&apos;Avigneau
+              a complété sa formation par des spécialisations complémentaires en
+              dentisterie moderne.
             </p>
             <p className="mb-0 text-ink-soft max-w-[54ch] text-[16.5px]">
               Son approche est conservatrice par principe&nbsp;: préserver chaque tissu sain,

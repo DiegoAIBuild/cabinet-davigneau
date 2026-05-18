@@ -18,15 +18,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cabinet-davigneau.vercel.app"),
   title: "Dr Thibaud Marie d'Avigneau — Chirurgien-dentiste · Saint-Nazaire",
   description:
-    "Cabinet du Dr Thibaud Marie d'Avigneau. Dentisterie d'excellence, technologies de pointe, sérénité. 20 rue Antoine Parmentier, Saint-Nazaire.",
+    "Cabinet du Dr Thibaud Marie d'Avigneau, chirurgien-dentiste à Saint-Nazaire. 20 rue Antoine Parmentier, 44600.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Dr Thibaud Marie d'Avigneau — Chirurgien-dentiste",
     description:
-      "Dentisterie d'excellence à Saint-Nazaire. Implantologie, orthodontie invisible, esthétique du sourire.",
+      "Cabinet dentaire à Saint-Nazaire. Soins dentaires, prothèses, prévention.",
     locale: "fr_FR",
     type: "website",
+    url: "https://cabinet-davigneau.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dr d'Avigneau — Chirurgien-dentiste · Saint-Nazaire",
+    description: "Cabinet dentaire à Saint-Nazaire. Soins, prothèses, prévention.",
   },
 };
 

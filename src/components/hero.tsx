@@ -90,7 +90,7 @@ export function Hero() {
             <Reveal>
               <div className="inline-flex items-center gap-3.5 text-[11px] font-medium tracking-[.32em] uppercase text-gold-deep mb-9">
                 <span className="w-7 h-px bg-gold" />
-                Cabinet d&apos;excellence — depuis 2014
+                Cabinet d&apos;excellence · Saint-Nazaire
               </div>
             </Reveal>
             <Reveal delay={0.08}>
@@ -170,7 +170,7 @@ export function Hero() {
               </div>
               {/* Floaters */}
               {[
-                { label: "Scanner 3D iTero", cls: "top-[8%] left-[-2%]", delay: "-2s" },
+                { label: "Empreinte numérique 3D", cls: "top-[8%] left-[-2%]", delay: "-2s" },
                 { label: "Sans empreinte physique", cls: "bottom-[14%] right-[-4%]", delay: "-4s" },
                 { label: "Conservatrice avant tout", cls: "top-[46%] right-[-8%]", delay: "-6s" },
               ].map((f) => (

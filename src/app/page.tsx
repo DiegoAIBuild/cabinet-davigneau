@@ -59,7 +59,7 @@ export default function Home() {
             "@type": "Dentist",
             name: "Cabinet d'Avigneau — Dr Thibaud Marie d'Avigneau",
             description:
-              "Chirurgien-dentiste à Saint-Nazaire. Implantologie, orthodontie invisible, esthétique du sourire, soins conservateurs.",
+              "Chirurgien-dentiste à Saint-Nazaire. Soins dentaires, prothèses, prévention.",
             url: "https://cabinet-davigneau.fr",
             telephone: "+33240701559",
             address: {
@@ -71,20 +71,14 @@ export default function Home() {
             },
             geo: {
               "@type": "GeoCoordinates",
-              latitude: 47.2833,
-              longitude: -2.2,
+              latitude: 47.2782,
+              longitude: -2.2089,
             },
-            openingHoursSpecification: [
-              { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Thursday"], opens: "08:30", closes: "19:00" },
-              { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "08:30", closes: "13:00" },
-              { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "08:30", closes: "17:00" },
-            ],
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.9",
-              reviewCount: "240",
-            },
+            // TODO: Confirmer les horaires exacts avec le cabinet avant publication
+            medicalSpecialty: "Dentistry",
             priceRange: "€€",
+            paymentAccepted: "Carte vitale, CB, chèque",
+            isAcceptingNewPatients: true,
           }),
         }}
       />

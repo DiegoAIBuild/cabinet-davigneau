@@ -65,7 +65,7 @@ export function Footer() {
         </div>
 
         <div className="mt-20 pt-6 border-t border-white/10 flex justify-between gap-6 flex-wrap text-[12px] text-white/50 tracking-[.02em]">
-          <span>© 2026 SELARL COACH — Dr Thibaud Marie d&apos;Avigneau, chirurgien-dentiste · n° RPPS 10000000000</span>
+          <span>© 2026 SELARL COACH — Dr Thibaud Marie d&apos;Avigneau, chirurgien-dentiste · n° RPPS 10100447670</span>
           <a href="#top" className="hover:text-white transition-colors">Retour en haut ↑</a>
         </div>
       </div>
