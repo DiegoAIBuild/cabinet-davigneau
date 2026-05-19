@@ -15,12 +15,13 @@ export function FloatingCta() {
   return (
     <a
       href="#contact"
-      className={`fixed right-[clamp(16px,3vw,32px)] bottom-[clamp(16px,3vw,32px)] z-90 px-[22px] py-4 rounded-full bg-ink text-white flex items-center gap-3 text-[14px] font-medium shadow-[0_20px_40px_-16px_rgba(27,58,92,.5)] transition-all duration-500 ${
+      className={`fixed right-4 sm:right-[clamp(16px,3vw,32px)] bottom-4 sm:bottom-[clamp(16px,3vw,32px)] z-90 px-4 sm:px-[22px] py-3 sm:py-4 rounded-full bg-ink text-white flex items-center gap-2.5 sm:gap-3 text-[13px] sm:text-[14px] font-medium shadow-[0_20px_40px_-16px_rgba(27,58,92,.5)] transition-all duration-500 ${
         show ? "translate-y-0 opacity-100" : "translate-y-[120%] opacity-0"
       }`}
       style={{ transitionTimingFunction: "var(--ease)" }}
     >
-      Prendre rendez-vous
+      <span className="hidden sm:inline">Prendre rendez-vous</span>
+      <span className="sm:hidden">RDV</span>
       <span className="inline-grid place-items-center w-6 h-6 rounded-full bg-gold text-ink">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-[11px] h-[11px]">
           <path d="M5 12h14M13 6l6 6-6 6" />

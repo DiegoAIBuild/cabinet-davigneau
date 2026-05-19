@@ -57,7 +57,7 @@ export function AvantApres() {
         <Reveal>
           <div
             ref={stageRef}
-            className="relative mt-12 aspect-[16/8.5] rounded-lg overflow-hidden bg-mist-deep border border-rule cursor-ew-resize select-none shadow-[0_40px_80px_-40px_rgba(27,58,92,.25)]"
+            className="relative mt-12 aspect-[4/3] sm:aspect-[16/8.5] rounded-lg overflow-hidden bg-mist-deep border border-rule cursor-ew-resize select-none shadow-[0_40px_80px_-40px_rgba(27,58,92,.25)]"
             onPointerDown={onPointerDown}
             onPointerMove={onPointerMove}
           >

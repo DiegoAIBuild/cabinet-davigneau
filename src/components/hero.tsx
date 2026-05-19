@@ -146,7 +146,7 @@ export function Hero() {
           </div>
 
           {/* Right — tooth illustration */}
-          <Reveal delay={0.16} className="relative grid place-items-center min-h-[380px] lg:min-h-[520px] max-lg:order-2">
+          <Reveal delay={0.16} className="relative grid place-items-center min-h-[280px] sm:min-h-[380px] lg:min-h-[520px] max-lg:order-2">
             <div className="relative w-[min(560px,90%)] aspect-square grid place-items-center">
               {/* Glow */}
               <div
@@ -176,7 +176,7 @@ export function Hero() {
               ].map((f) => (
                 <div
                   key={f.label}
-                  className={`absolute ${f.cls} font-serif italic text-ink bg-white border border-rule rounded-full px-[18px] py-2.5 text-[13.5px] tracking-[-0.005em] shadow-[0_14px_30px_-10px_rgba(27,58,92,.18)] flex items-center gap-2.5`}
+                  className={`absolute ${f.cls} font-serif italic text-ink bg-white border border-rule rounded-full px-[18px] py-2.5 text-[13.5px] tracking-[-0.005em] shadow-[0_14px_30px_-10px_rgba(27,58,92,.18)] hidden sm:flex items-center gap-2.5`}
                   style={{ animation: `float 9s ease-in-out infinite ${f.delay}` }}
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-gold" />

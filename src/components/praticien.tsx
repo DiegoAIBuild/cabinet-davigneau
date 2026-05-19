@@ -68,22 +68,22 @@ export function Praticien() {
             </div>
 
             {/* Animated stats */}
-            <div className="mt-12 grid grid-cols-3 gap-6 pt-8 border-t border-rule">
+            <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 border-t border-rule">
               <div>
-                <div className="font-serif text-[34px] font-medium text-ink tracking-[-0.015em] leading-none">
+                <div className="font-serif text-[30px] sm:text-[34px] font-medium text-ink tracking-[-0.015em] leading-none">
                   <AnimatedCounter end={5} suffix="/5" />
                 </div>
                 <div className="mt-2 text-[12.5px] text-muted tracking-[.02em]">Note Google</div>
               </div>
               <div>
-                <div className="font-serif text-[34px] font-medium text-ink tracking-[-0.015em] leading-none">
+                <div className="font-serif text-[30px] sm:text-[34px] font-medium text-ink tracking-[-0.015em] leading-none">
                   <AnimatedCounter end={10} suffix="+" />
                 </div>
                 <div className="mt-2 text-[12.5px] text-muted tracking-[.02em]">Avis patients</div>
               </div>
-              <div>
-                <div className="font-serif text-[34px] font-medium text-ink tracking-[-0.015em] leading-none">
-                  Secteur <AnimatedCounter end={1} />
+              <div className="col-span-2 sm:col-span-1">
+                <div className="font-serif text-[30px] sm:text-[34px] font-medium text-ink tracking-[-0.015em] leading-none">
+                  Sect. <AnimatedCounter end={1} />
                 </div>
                 <div className="mt-2 text-[12.5px] text-muted tracking-[.02em]">Conventionné</div>
               </div>

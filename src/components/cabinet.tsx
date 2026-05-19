@@ -1,10 +1,10 @@
 import { BlurFade } from "./blur-fade";
 
 const tiles = [
-  { label: "01 · Accueil", cap: "Lumière naturelle", cls: "col-span-2 lg:col-span-7 lg:row-span-2 aspect-[4/3] lg:aspect-auto", bg: "linear-gradient(160deg,#d7dde8,#b9c2d3)" },
-  { label: "02 · Salle de soin A", cap: "Chêne & lin", cls: "col-span-1 lg:col-span-5", bg: "linear-gradient(180deg,#e8e1cc,#cdbf99)" },
-  { label: "03 · Stérilisation", cap: "ISO 13485", cls: "col-span-1 lg:col-span-3", bg: "linear-gradient(160deg,#dee2eb,#b6bfd2)" },
-  { label: "04 · Chirurgie", cap: "Asepsie complète", cls: "col-span-1 lg:col-span-2", bg: "linear-gradient(180deg,#1B3A5C,#264a72)", dark: true },
+  { label: "01 · Accueil", cap: "Lumière naturelle", cls: "col-span-2 lg:col-span-7 lg:row-span-2 min-h-[180px] sm:min-h-[220px] lg:min-h-0", bg: "linear-gradient(160deg,#d7dde8,#b9c2d3)" },
+  { label: "02 · Salle de soin A", cap: "Chêne & lin", cls: "col-span-1 lg:col-span-5 min-h-[140px] sm:min-h-[180px]", bg: "linear-gradient(180deg,#e8e1cc,#cdbf99)" },
+  { label: "03 · Stérilisation", cap: "ISO 13485", cls: "col-span-1 lg:col-span-3 min-h-[140px] sm:min-h-[180px]", bg: "linear-gradient(160deg,#dee2eb,#b6bfd2)" },
+  { label: "04 · Chirurgie", cap: "Asepsie complète", cls: "col-span-2 sm:col-span-1 lg:col-span-2 min-h-[140px] sm:min-h-[180px]", bg: "linear-gradient(180deg,#1B3A5C,#264a72)", dark: true },
 ];
 
 export function Cabinet() {
